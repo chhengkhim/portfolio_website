@@ -5,8 +5,8 @@ import {
   FaTimes,
   FaGithub,
   FaLinkedin,
+  FaFacebook, // Import Facebook icon
 } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
 
@@ -63,19 +63,16 @@ const Navbar = () => {
           </Link>
         </li>
         <li className='py-6 text-4xl'>
-          {' '}
           <Link onClick={handleClick} to='about' smooth={true} duration={500}>
             About
           </Link>
         </li>
         <li className='py-6 text-4xl'>
-          {' '}
           <Link onClick={handleClick} to='work' smooth={true} duration={500}>
             Work
           </Link>
         </li>
         <li className='py-6 text-4xl'>
-          {' '}
           <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
             Skills
           </Link>
@@ -101,12 +98,14 @@ const Navbar = () => {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3b5998]'> {/* Facebook color */}
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://mail.google.com/mail/u/0/#inbox'
+              href='https://web.facebook.com/pisethsambo2004' 
+              target="_blank"
+              rel="noopener noreferrer" 
             >
-              Email <HiOutlineMail size={30} />
+              Facebook <FaFacebook size={30} />
             </a>
           </li>
         </ul>
@@ -116,3 +115,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
